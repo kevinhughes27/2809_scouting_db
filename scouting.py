@@ -9,8 +9,9 @@ while True:
     cmd = raw_input('Enter a Command: ')
 
     if cmd == 'input':
-        while num < 7:
-            
+        line = 1
+        expectedScore = 0
+        while line < 7:
             try:
                 team = int(raw_input('Team: '))
                 match = int(raw_input('match: '))
@@ -25,8 +26,19 @@ while True:
                 while climb != 10 and climb != 20 and climb != 30 and climb != 0:
                     print 'Invalid Input, climb score can only be 0, 10, 20 or 30'
                     climb = int(raw_input('climb score: '))
+                if line == 3:
+                    redScore = int(raw_input('Red Team total: '))
+                    expectedScore = 0
+                if line == 6:
+                    bluScore = int(raw_input('Blu Team Score: '))
+                    if expectedScore == bluScore:
+                        expectedScore = 0
+                    else:
+                        print 'User Error: Score inputs do not match'
                 row = (team,match,auto1,auto2,auto3,five,three,two,one,climb)
+                expectedScore = expectedScore + (auto3*6) + (auto2*4) + (auto1*2) + (five*5) + (three*3) + (two*2) + one + climb
                 c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
+                line += 1
             except ValueError:
                 print 'invalid number'
 
