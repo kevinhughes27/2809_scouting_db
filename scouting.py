@@ -35,11 +35,12 @@ while True:
                         expectedScore = 0
                     else:
                         print 'User Error: Score inputs do not match'
-                row = (team,match,auto1,auto2,auto3,five,three,two,one,climb)
+                row = (team,match,auto3,auto2,auto1,five,three,two,one,climb)
                 expectedScore = expectedScore + (auto3*6) + (auto2*4) + (auto1*2) + (five*5) + (three*3) + (two*2) + one + climb
                 c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
                 line += 1
             except ValueError:
+
                 print 'invalid number'
 
     elif cmd == 'output':
