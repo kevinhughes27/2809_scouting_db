@@ -15,9 +15,7 @@ while True:
             try:
                 team = int(raw_input('Team: '))
                 match = int(raw_input('match: '))
-                auto3 = int(raw_input('Autonomous Three Pointers: '))
-                auto2 = int(raw_input('Autonomous Two Pointers: '))
-                auto1 = int(raw_input('Autonomous One Pointers: '))
+                autoScore = int(raw_input('Autonomous Score: '))
                 five = int(raw_input('Five Pointers: '))
                 three = int(raw_input('Three pointers: '))
                 two = int(raw_input('Two pointers: '))
@@ -26,6 +24,7 @@ while True:
                 while climb != 10 and climb != 20 and climb != 30 and climb != 0:
                     print 'Invalid Input, climb score can only be 0, 10, 20 or 30'
                     climb = int(raw_input('climb score: '))
+                notes = str(raw_input('notes: '))
                 if line == 3:
                     redScore = int(raw_input('Red Team total: '))
                     expectedScore = 0
@@ -35,10 +34,10 @@ while True:
                         expectedScore = 0
                     else:
                         print 'User Error: Score inputs do not match'
-                row = (team,match,auto3,auto2,auto1,five,three,two,one,climb)
-                expectedScore = expectedScore + (auto3*6) + (auto2*4) + (auto1*2) + (five*5) + (three*3) + (two*2) + one + climb
-                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
-                line += 1
+                row = (team,match,autoScore,five,three,two,one,climb,notes)
+                expectedScore = expectedScore + autoScore + (five*5) + (three*3) + (two*2) + one + climb
+                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?)', row)
+                line += 1 
             except ValueError:
 
                 print 'invalid number'
@@ -55,8 +54,8 @@ while True:
     elif cmd == 'clear':
         c.execute('DROP TABLE if exists teams')
         c.execute('''CREATE TABLE teams
-                    (Team, Match, AutoThree, AutoTwo, AutoOne,
-                    FivePointers, ThreePointers, TwoPointers, OnePointers, ClimbScore)''')
+                    (team, match, auto, five, three,
+                    two, one, climb, notes)''')
         
     else:
         print 'unrecognized command'
