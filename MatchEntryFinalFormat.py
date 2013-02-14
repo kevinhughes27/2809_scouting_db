@@ -114,7 +114,7 @@ class New_Toplevel_1:
         self.version.configure(activeforeground="#ffffff")
         self.version.configure(background="#000000")
         self.version.configure(foreground="#ffffff")
-        self.version.configure(text='''version BETA 0.2''')
+        self.version.configure(text='''version BETA 0.9''')
 
         self.copyright = Label (master)
         self.copyright.place(relx=0.33,rely=0.08,height=21,width=371)
@@ -130,7 +130,7 @@ class New_Toplevel_1:
 
         self.MatchEntry = Entry (master)
         self.MatchEntry.place(relx=0.44,rely=0.14,relheight=0.03,relwidth=0.11)
-        self.MatchEntry.configure(background="white")
+        self.MatchEntry.configure(background="white", text='''''')
 
         self.RedTeam = Label (master)
         self.RedTeam.place(relx=0.18,rely=0.13,height=21,width=71)
@@ -157,40 +157,40 @@ class New_Toplevel_1:
 
         self.RedEntry1 = Entry (master)
         self.RedEntry1.place(relx=0.08,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.RedEntry1.configure(background="white")
+        self.RedEntry1.configure(background="white", text='''''')
 
         self.RedAuto1 = Entry (master)
         self.RedAuto1.place(relx=0.08,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.RedAuto1.configure(background="white")
+        self.RedAuto1.configure(background="white", text='''''')
 
         self.Red3Points1 = Entry (master)
         self.Red3Points1.place(relx=0.08,rely=0.28,relheight=0.03,relwidth=0.05)
 
-        self.Red3Points1.configure(background="white")
+        self.Red3Points1.configure(background="white", text='''''')
 
         self.Red2Points1 = Entry (master)
         self.Red2Points1.place(relx=0.08,rely=0.32,relheight=0.03,relwidth=0.05)
 
-        self.Red2Points1.configure(background="white")
+        self.Red2Points1.configure(background="white", text='''''')
 
 
         self.Red1Points1 = Entry (master)
         self.Red1Points1.place(relx=0.08,rely=0.36,relheight=0.03,relwidth=0.05)
 
-        self.Red1Points1.configure(background="white")
+        self.Red1Points1.configure(background="white", text='''''')
 
         self.Red5Points1 = Entry (master)
         self.Red5Points1.place(relx=0.08,rely=0.4,relheight=0.03,relwidth=0.05)
-        self.Red5Points1.configure(background="white")
+        self.Red5Points1.configure(background="white", text='''''')
 
         self.RedClimbHeight1 = Entry (master)
         self.RedClimbHeight1.place(relx=0.08,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.RedClimbHeight1.configure(background="white")
+        self.RedClimbHeight1.configure(background="white", text='''''')
 
         self.RedNote1 = Text (master)
         self.RedNote1.place(relx=0.03,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote1.configure(background="white")
+        self.RedNote1.configure(background="white", text='''''')
 
 
 
@@ -201,39 +201,39 @@ class New_Toplevel_1:
 
         self.RedEntry2 = Entry (master)
         self.RedEntry2.place(relx=0.19,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.RedEntry2.configure(background="white")
+        self.RedEntry2.configure(background="white", text='''''')
 
         self.RedAuto2 = Entry (master)
         self.RedAuto2.place(relx=0.19,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.RedAuto2.configure(background="white")
+        self.RedAuto2.configure(background="white", text='''''')
 
         self.Red3Points2 = Entry (master)
         self.Red3Points2.place(relx=0.19,rely=0.28,relheight=0.03,relwidth=0.05)
 
-        self.Red3Points2.configure(background="white")
+        self.Red3Points2.configure(background="white", text='''''')
 
         self.Red2Points2 = Entry (master)
         self.Red2Points2.place(relx=0.19,rely=0.32,relheight=0.03,relwidth=0.05)
 
-        self.Red2Points2.configure(background="white")
+        self.Red2Points2.configure(background="white", text='''''')
 
         self.Red1Points2 = Entry (master)
         self.Red1Points2.place(relx=0.19,rely=0.36,relheight=0.03,relwidth=0.05)
 
-        self.Red1Points2.configure(background="white")
+        self.Red1Points2.configure(background="white", text='''''')
 
         self.Red5Points2 = Entry (master)
         self.Red5Points2.place(relx=0.19,rely=0.4,relheight=0.03,relwidth=0.05)
-        self.Red5Points2.configure(background="white")
+        self.Red5Points2.configure(background="white", text='''''')
 
         self.RedClimbHeight2 = Entry (master)
         self.RedClimbHeight2.place(relx=0.19,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.RedClimbHeight2.configure(background="white")
+        self.RedClimbHeight2.configure(background="white", text='''''')
 
         self.RedNote2 = Text (master)
         self.RedNote2.place(relx=0.15,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote2.configure(background="white")
+        self.RedNote2.configure(background="white", text='''''')
 
 
 
@@ -247,7 +247,7 @@ class New_Toplevel_1:
 
         self.RedEntry3 = Entry (master)
         self.RedEntry3.place(relx=0.31,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.RedEntry3.configure(background="white")
+        self.RedEntry3.configure(background="white", text='''''')
 
         self.PointsText1 = Label (master)
         self.PointsText1.place(relx=0.03,rely=0.24,height=11,width=31)
@@ -260,7 +260,7 @@ class New_Toplevel_1:
 
         self.RedAuto3 = Entry (master)
         self.RedAuto3.place(relx=0.31,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.RedAuto3.configure(background="white")
+        self.RedAuto3.configure(background="white", text='''''')
 
         self.ShotsText1 = Label (master)
         self.ShotsText1.place(relx=0.01,rely=0.28,height=21,width=71)
@@ -274,7 +274,7 @@ class New_Toplevel_1:
         self.Red3Points3 = Entry (master)
         self.Red3Points3.place(relx=0.31,rely=0.28,relheight=0.03,relwidth=0.05)
 
-        self.Red3Points3.configure(background="white")
+        self.Red3Points3.configure(background="white", text='''''')
 
         self.HeightText1 = Label (master)
         self.HeightText1.place(relx=0.01,rely=0.32,height=21,width=58)
@@ -288,7 +288,7 @@ class New_Toplevel_1:
         self.Red2Points3 = Entry (master)
         self.Red2Points3.place(relx=0.31,rely=0.32,relheight=0.03,relwidth=0.05)
 
-        self.Red2Points3.configure(background="white")
+        self.Red2Points3.configure(background="white", text='''''')
 
 
 
@@ -297,7 +297,7 @@ class New_Toplevel_1:
         self.Red1Points3 = Entry (master)
         self.Red1Points3.place(relx=0.31,rely=0.36,relheight=0.03,relwidth=0.05)
 
-        self.Red1Points3.configure(background="white")
+        self.Red1Points3.configure(background="white", text='''''')
 
 
 
@@ -305,7 +305,7 @@ class New_Toplevel_1:
 
         self.Red5Points3 = Entry (master)
         self.Red5Points3.place(relx=0.31,rely=0.4,relheight=0.03,relwidth=0.05)
-        self.Red5Points3.configure(background="white")
+        self.Red5Points3.configure(background="white", text='''''')
 
 
 
@@ -314,16 +314,16 @@ class New_Toplevel_1:
         self.RedClimbHeight3 = Entry (master)
         self.RedClimbHeight3.place(relx=0.31,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.RedClimbHeight3.configure(background="white")
+        self.RedClimbHeight3.configure(background="white", text='''''')
 
         
         self.RedNote3 = Text (master)
         self.RedNote3.place(relx=0.27,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote3.configure(background="white")  
+        self.RedNote3.configure(background="white", text='''''')  
 
         self.RedScore1 = Entry (master)
         self.RedScore1.place(relx=0.15,rely=0.5,relheight=0.03,relwidth=0.11)
-        self.RedScore1.configure(background="white")
+        self.RedScore1.configure(background="white", text='''''')
 
 
 
@@ -368,7 +368,7 @@ class New_Toplevel_1:
 
         self.BlueEntry1 = Entry (master)
         self.BlueEntry1.place(relx=0.69,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.BlueEntry1.configure(background="white")
+        self.BlueEntry1.configure(background="white", text='''''')
 
         self.hashtag5 = Label (master)
         self.hashtag5.place(relx=0.79,rely=0.2,height=21,width=13)
@@ -378,37 +378,37 @@ class New_Toplevel_1:
 
         self.BlueAuto1 = Entry (master)
         self.BlueAuto1.place(relx=0.69,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.BlueAuto1.configure(background="white")
+        self.BlueAuto1.configure(background="white", text='''''')
 
 
         self.Blue3Points1 = Entry (master)
         self.Blue3Points1.place(relx=0.69,rely=0.28,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue3Points1.configure(background="white")
+        self.Blue3Points1.configure(background="white", text='''''')
 
         self.Blue2Points1 = Entry (master)
         self.Blue2Points1.place(relx=0.69,rely=0.32,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue2Points1.configure(background="white")
+        self.Blue2Points1.configure(background="white", text='''''')
 
         self.Blue1Points1 = Entry (master)
         self.Blue1Points1.place(relx=0.69,rely=0.36,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue1Points1.configure(background="white")
+        self.Blue1Points1.configure(background="white", text='''''')
 
         self.Blue5Points1 = Entry (master)
         self.Blue5Points1.place(relx=0.69,rely=0.4,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue5Points1.configure(background="white")
+        self.Blue5Points1.configure(background="white", text='''''')
 
         self.BlueClimbHeight1 = Entry (master)
         self.BlueClimbHeight1.place(relx=0.69,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.BlueClimbHeight1.configure(background="white")        
+        self.BlueClimbHeight1.configure(background="white", text='''''')        
 
         self.BlueNote1 = Text (master)
         self.BlueNote1.place(relx=0.62,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote1.configure(background="white")
+        self.BlueNote1.configure(background="white", text='''''')
 
 
 
@@ -432,7 +432,7 @@ class New_Toplevel_1:
 
         self.BlueEntry2 = Entry (master)
         self.BlueEntry2.place(relx=0.81,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.BlueEntry2.configure(background="white")
+        self.BlueEntry2.configure(background="white", text='''''')
 
         self.hashtag6 = Label (master)
         self.hashtag6.place(relx=0.9,rely=0.2,height=21,width=13)
@@ -442,35 +442,35 @@ class New_Toplevel_1:
 
         self.BlueAuto2 = Entry (master)
         self.BlueAuto2.place(relx=0.81,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.BlueAuto2.configure(background="white")
+        self.BlueAuto2.configure(background="white", text='''''')
 
         self.Blue3Points2 = Entry (master)
         self.Blue3Points2.place(relx=0.81,rely=0.28,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue3Points2.configure(background="white")
+        self.Blue3Points2.configure(background="white", text='''''')
 
         self.Blue2Points2 = Entry (master)
         self.Blue2Points2.place(relx=0.81,rely=0.32,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue2Points2.configure(background="white")
+        self.Blue2Points2.configure(background="white", text='''''')
 
         self.Blue1Points2 = Entry (master)
         self.Blue1Points2.place(relx=0.81,rely=0.36,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue1Points2.configure(background="white")
+        self.Blue1Points2.configure(background="white", text='''''')
 
         self.Blue5Points2 = Entry (master)
         self.Blue5Points2.place(relx=0.81,rely=0.4,relheight=0.03,relwidth=0.05)
-        self.Blue5Points2.configure(background="white")
+        self.Blue5Points2.configure(background="white", text='''''')
 
         self.BlueClimbHeight2 = Entry (master)
         self.BlueClimbHeight2.place(relx=0.81,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.BlueClimbHeight2.configure(background="white")
+        self.BlueClimbHeight2.configure(background="white", text='''''')
 
         self.BlueNote2 = Text (master)
         self.BlueNote2.place(relx=0.74,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote2.configure(background="white")
+        self.BlueNote2.configure(background="white", text='''''')
 
 
 
@@ -480,7 +480,7 @@ class New_Toplevel_1:
 
         self.BlueEntry3 = Entry (master)
         self.BlueEntry3.place(relx=0.91,rely=0.2,relheight=0.03,relwidth=0.05)
-        self.BlueEntry3.configure(background="white")
+        self.BlueEntry3.configure(background="white", text='''''')
 
 
         self.PointsText2 = Label (master)
@@ -494,7 +494,7 @@ class New_Toplevel_1:
 
         self.BlueAuto3 = Entry (master)
         self.BlueAuto3.place(relx=0.91,rely=0.24,relheight=0.03,relwidth=0.05)
-        self.BlueAuto3.configure(background="white")
+        self.BlueAuto3.configure(background="white", text='''''')
 
         self.ShotsText2 = Label (master)
         self.ShotsText2.place(relx=0.63,rely=0.28,height=21,width=58)
@@ -508,7 +508,7 @@ class New_Toplevel_1:
         self.Blue3Points3 = Entry (master)
         self.Blue3Points3.place(relx=0.91,rely=0.28,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue3Points3.configure(background="white")
+        self.Blue3Points3.configure(background="white", text='''''')
 
         self.HeightText2 = Label (master)
         self.HeightText2.place(relx=0.63,rely=0.32,height=21,width=58)
@@ -522,7 +522,7 @@ class New_Toplevel_1:
         self.Blue2Points3 = Entry (master)
         self.Blue2Points3.place(relx=0.91,rely=0.32,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue2Points3.configure(background="white")
+        self.Blue2Points3.configure(background="white", text='''''')
 
         self.Label1 = Label (master)
         self.Label1.place(relx=0.01,rely=0.36,height=21,width=58)
@@ -543,7 +543,7 @@ class New_Toplevel_1:
         self.Blue1Points3 = Entry (master)
         self.Blue1Points3.place(relx=0.91,rely=0.36,relheight=0.03
                 ,relwidth=0.05)
-        self.Blue1Points3.configure(background="white")
+        self.Blue1Points3.configure(background="white", text='''''')
 
         self.Label3 = Label (master)
         self.Label3.place(relx=0.01,rely=0.44,height=21,width=75)
@@ -561,12 +561,12 @@ class New_Toplevel_1:
 
         self.Blue5Points3 = Entry (master)
         self.Blue5Points3.place(relx=0.91,rely=0.4,relheight=0.03,relwidth=0.05)
-        self.Blue5Points3.configure(background="white")
+        self.Blue5Points3.configure(background="white", text='''''')
 
         self.BlueClimbHeight3 = Entry (master)
         self.BlueClimbHeight3.place(relx=0.91,rely=0.44,relheight=0.03
                 ,relwidth=0.05)
-        self.BlueClimbHeight3.configure(background="white")
+        self.BlueClimbHeight3.configure(background="white", text='''''')
 
 
 
@@ -576,7 +576,7 @@ class New_Toplevel_1:
 
         self.BlueNote3 = Text (master)
         self.BlueNote3.place(relx=0.86,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote3.configure(background="white")
+        self.BlueNote3.configure(background="white", text='''''')
 
         self.Label6 = Label (master)
         self.Label6.place(relx=0.17,rely=0.47,height=21,width=88)
@@ -592,7 +592,7 @@ class New_Toplevel_1:
 
         self.BlueScore1 = Entry (master)
         self.BlueScore1.place(relx=0.74,rely=0.5,relheight=0.03,relwidth=0.11)
-        self.BlueScore1.configure(background="white")
+        self.BlueScore1.configure(background="white", text='''''')
 
 
 
@@ -787,6 +787,8 @@ def callback():
                 conn.commit()
                 conn.close
                 i = i+1
+
+    
 
     read = raw_input('type read to read: ')
     if read == 'read':

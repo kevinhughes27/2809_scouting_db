@@ -56,6 +56,14 @@ while True:
         c.execute('''CREATE TABLE teams
                     (team, match, auto, five, three,
                     two, one, climb, notes)''')
+    elif cmd == 'ping':
+        print 'pong'
+
+    elif cmd == 'no':
+        print 'yes'
+
+    elif cmd == 'yes':
+        print 'no'
         
     else:
         print 'unrecognized command'
