@@ -15,6 +15,8 @@ while True:
             try:
                 team = int(raw_input('Team: '))
                 match = int(raw_input('match: '))
+                colour = int(raw_input('Alliance Color: (0 for Red 1 For Blue)'))
+                alliance = int(raw_input('alliance'))
                 autoScore = int(raw_input('Autonomous Score: '))
                 five = int(raw_input('Five Pointers: '))
                 three = int(raw_input('Three pointers: '))
@@ -27,16 +29,21 @@ while True:
                 notes = str(raw_input('notes: '))
                 if line == 3:
                     redScore = int(raw_input('Red Team total: '))
+                    if expectedScore == redScore:
+                        None
+                    else:
+                        print 'User Error: Score inputs do not match!'
                     expectedScore = 0
                 if line == 6:
-                    bluScore = int(raw_input('Blu Team Score: '))
+                    bluScore = int(raw_input('Blue Team Score: '))
                     if expectedScore == bluScore:
-                        expectedScore = 0
+                        None
                     else:
                         print 'User Error: Score inputs do not match'
-                row = (team,match,autoScore,five,three,two,one,climb,notes)
+                    expectedScore = 0    
+                row = (team,match,autoScore,five,three,two,one,climb,notes,colour)
                 expectedScore = expectedScore + autoScore + (five*5) + (three*3) + (two*2) + one + climb
-                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?)', row)
+                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
                 line += 1 
             except ValueError:
 
@@ -55,15 +62,7 @@ while True:
         c.execute('DROP TABLE if exists teams')
         c.execute('''CREATE TABLE teams
                     (team, match, auto, five, three,
-                    two, one, climb, notes)''')
-    elif cmd == 'ping':
-        print 'pong'
-
-    elif cmd == 'no':
-        print 'yes'
-
-    elif cmd == 'yes':
-        print 'no'
+                    two, one, climb, notes, colour)''')
         
     else:
         print 'unrecognized command'
