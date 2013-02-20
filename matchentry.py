@@ -86,7 +86,7 @@ class New_Toplevel_1:
 
         self.copyright = Label (master)
         self.copyright.place(relx=0.17,rely=0.11,height=21,width=371)
-        self.copyright.configure(text='''(C) Russell Dawes, Sawyer Ship-Wiedersprecher, and Kevin Hughes''')
+        self.copyright.configure(text='''(C) Russell Dawes, Sawyer Shipp-Wiedersprecher, and Kevin Hughes''')
 
         self.Match = Label (master)
         self.Match.place(relx=0.35,rely=0.22,height=21,width=50)
@@ -102,7 +102,7 @@ class New_Toplevel_1:
 
         self.BlueScore = Label (master)
         self.BlueScore.place(relx=0.77,rely=0.31,height=21,width=71)
-        self.BlueScore.configure(text='''Blue Score''')
+        self.BlueScore.configure(text='''Blu Score''')
 
         self.RedEntry = Entry (master)
         self.RedEntry.place(relx=0.07,rely=0.38,relheight=0.04,relwidth=0.21)

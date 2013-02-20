@@ -301,13 +301,9 @@ class New_Toplevel_1:
 
 
 
-
-
         self.Red5Points3 = Entry (master)
         self.Red5Points3.place(relx=0.31,rely=0.4,relheight=0.03,relwidth=0.05)
         self.Red5Points3.configure(background="white", text='''''')
-
-
 
 
 
@@ -325,10 +321,6 @@ class New_Toplevel_1:
         self.RedScore1.place(relx=0.15,rely=0.5,relheight=0.03,relwidth=0.11)
         self.RedScore1.configure(background="white", text='''''')
 
-
-
-
-      
 
 
 
