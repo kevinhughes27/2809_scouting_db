@@ -4,8 +4,8 @@ import tkFileDialog
 import tkMessageBox
 import os
 from PIL import Image, ImageTk
-import numpy
-from numpy import *
+#import numpy
+#from numpy import *
 import sys
 import sqlite3
 conn = sqlite3.connect('scouting.db')
@@ -13,7 +13,7 @@ c = conn.cursor()
 conn.text_factory = str
 
 c.execute('''CREATE TABLE if not exists pitScouting
-            (team, drivetrain, notes, picture)''')
+            (team, drivetrain, notes)''')
 
 teamPhotosDir = None
 rootDir = None
@@ -56,18 +56,18 @@ def main():
     NotesEntry.grid(row=1, column=2, sticky=N+E+W+S)
 
 
-    PictureBtn = Button(top, text="Load Picture", command=getPicture)
-    PictureBtn.grid(row=2, column=2, sticky=N+E+W+S)
+    #PictureBtn = Button(top, text="Load Picture", command=getPicture)
+    #PictureBtn.grid(row=2, column=2, sticky=N+E+W+S)
 
-    DoneBtn = Button(top, text="Enter", #command=Enterdata)
-                     )
+    DoneBtn = Button(top, text="Enter", command=EnterData)
+                     
     DoneBtn.grid(row=2, column=1, sticky=N+E+W+S)
 
     rootDir = os.getcwd()
     
     top.mainloop()
         
-def getPicture():
+'''def getPicture():
     global teamPhotosDir,photoWindow, photoWindowFrame, photoTeamNoEntry, teamPhotoCanvas
     global pitTeamNoLookupTbl
         
@@ -77,7 +77,7 @@ def getPicture():
     if teamPhotosDir == '' : return
 
     # turn the button off as a confirmation
-    pictureBtn.config(state=DISABLED)
+    #pictureBtn.config(state=DISABLED)
 
     # create a window to display the photos in
     photoWindow = Toplevel()
@@ -116,12 +116,16 @@ def getPicture():
     scrollFrame.rowconfigure(0, weight=1)
 
     # end makeTeamInfoWindow()
-
-#def EnterData()
- #   TeamNumber = int(w.TeamEntry.get())
-  #  DriveTrainEntry = str
-
-
+'''
+def EnterData():
+    TeamNumber = int(top.TeamEntry.get())
+    DriveTrain = str(top.DriveTrainEntry.get())
+    Notes = str(top.DriveTrainEntry.get())
+    row = (TeamNumber,DriveTrain,Notes)
+    c.execute('INSERT INTO pitScouting VALUES (?,?,?)', row)
+    conn.commit()
+    conn.close
+    
 
 
 main()
