@@ -8,7 +8,7 @@ import sqlite3
 conn = sqlite3.connect('scouting.db')
 c = conn.cursor()
 
-photoWindow=None
+'''photoWindow=None
 photoWindowFrame = None
 photoTeamNoEntry = None
 teamPhotoCanvas = None
@@ -21,7 +21,7 @@ TIW_PIT_ROW = 2
 TIW_MATCH_ROW = 4
 
 
-'''class VerticalScrolledFrame(Frame):
+class VerticalScrolledFrame(Frame):
     """A pure Tkinter scrollable frame that actually works!
 
     * Use the 'interior' attribute to place widgets inside the scrollable frame
@@ -76,7 +76,7 @@ TIW_MATCH_ROW = 4
 def photoWindowClose() :
     #photosBtn.config(state=ACTIVE)
     photoWindow.destroy()
-'''    
+    
 def getPicture():
 
     OpenPhoto = tkFileDialog.askdirectory(parent=top, initialdir='C:\Documents and Settings\CCSS\My Documents\GitHub\2809_scouting_db\pictures' ,title=\
@@ -86,13 +86,13 @@ def getPicture():
     im.show()
 
 
-
+'''
 teamNumber = int(raw_input('Enter a team number: '))
 for row in c.execute('SELECT * FROM pitScouting'):
     if row[0] == teamNumber:
         print row
         top = Tk()
-        getPicture()
+        #getPicture()
 
 
 
