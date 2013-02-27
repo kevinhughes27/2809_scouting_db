@@ -25,7 +25,8 @@ elif version >= 0x03010000:
     from tkinter import *
     import tkinter.ttk as ttk
 else:
-    print ("""    You do not have a version of python supporting ttk widgets..
+    print ("""
+    You do not have a version of python supporting ttk widgets..
     You need a version >= 2.6 to execute PAGE modules.
     """)
     sys.exit()
@@ -37,7 +38,7 @@ def vp_start_gui():
     global val, w, root
     root = Tk()
     root.title('New_Toplevel_1')
-    root.geometry('1167x759+377+100')
+    root.geometry('600x450+650+150')
     w = New_Toplevel_1 (root)
     init()
     root.mainloop()
@@ -50,7 +51,7 @@ def create_New_Toplevel_1 (root):
         return
     w = Toplevel (root)
     w.title('New_Toplevel_1')
-    w.geometry('1167x759+377+100')
+    w.geometry('600x450+650+150')
     w_win = New_Toplevel_1 (w)
     init()
     return w_win
