@@ -29,7 +29,7 @@ top = Tk()
 
 def main():
     global usePitData, pictureBtn, openPitFileBtn
-    global rootDir
+    global rootDir, TeamEntry, DriveTrainEntry, NotesEntry
 
     top.title("2809 Pit-Scouting")
     top.resizable(1, 1)
@@ -40,7 +40,7 @@ def main():
     TeamLbl = Label(top, text="Team:")
     TeamLbl.grid(row=0, column=0, sticky=N+E+W+S)
 
-    TeamEntry = Entry(top, text="Team")
+    TeamEntry = Entry(top)
     TeamEntry.grid(row=1, column=0, sticky=N+E+W+S)
 
     DrivetrainLbl = Label(top, text="Drivetrain:")
@@ -118,13 +118,17 @@ def main():
     # end makeTeamInfoWindow()
 '''
 def EnterData():
-    TeamNumber = int(top.TeamEntry.get())
-    DriveTrain = str(top.DriveTrainEntry.get())
-    Notes = str(top.DriveTrainEntry.get())
+    TeamNumber = int(TeamEntry.get())
+    DriveTrain = str(DriveTrainEntry.get())
+    Notes = str(NotesEntry.get())
     row = (TeamNumber,DriveTrain,Notes)
     c.execute('INSERT INTO pitScouting VALUES (?,?,?)', row)
     conn.commit()
     conn.close
+    TeamEntry.delete(0, END)
+    DriveTrainEntry.delete(0, END)
+    NotesEntry.delete(0, END)
+    TeamEntry.focus_set()
     
 
 
