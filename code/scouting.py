@@ -16,7 +16,6 @@ while True:
                 team = int(raw_input('Team: '))
                 match = int(raw_input('match: '))
                 colour = int(raw_input('Alliance Color: (0 for Red 1 For Blue)'))
-                alliance = int(raw_input('alliance'))
                 autoScore = int(raw_input('Autonomous Score: '))
                 five = int(raw_input('Five Pointers: '))
                 three = int(raw_input('Three pointers: '))
@@ -27,26 +26,21 @@ while True:
                     print 'Invalid Input, climb score can only be 0, 10, 20 or 30'
                     climb = int(raw_input('climb score: '))
                 notes = str(raw_input('notes: '))
+                expectedScore = expectedScore + autoScore + (five*5) + (three*3) + (two*2) + one + climb
                 if line == 3:
                     redScore = int(raw_input('Red Team total: '))
-                    if expectedScore == redScore:
-                        None
-                    else:
+                    if expectedScore != redScore:
                         print 'User Error: Score inputs do not match!'
                     expectedScore = 0
                 if line == 6:
                     bluScore = int(raw_input('Blue Team Score: '))
-                    if expectedScore == bluScore:
-                        None
-                    else:
+                    if expectedScore != bluScore:
                         print 'User Error: Score inputs do not match'
-                    expectedScore = 0    
+                    expectedScore = 0
                 row = (team,match,autoScore,five,three,two,one,climb,notes,colour)
-                expectedScore = expectedScore + autoScore + (five*5) + (three*3) + (two*2) + one + climb
                 c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
                 line += 1 
             except ValueError:
-
                 print 'invalid number'
 
     elif cmd == 'output':
