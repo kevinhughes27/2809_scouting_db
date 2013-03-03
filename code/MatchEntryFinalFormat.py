@@ -185,13 +185,12 @@ class New_Toplevel_1:
         self.Red5Points1.configure(background="white", text='''''')
 
         self.RedClimbHeight1 = Entry (master)
-        self.RedClimbHeight1.place(relx=0.08,rely=0.44,relheight=0.03
-                ,relwidth=0.05)
+        self.RedClimbHeight1.place(relx=0.08,rely=0.44,relheight=0.03,relwidth=0.05)
         self.RedClimbHeight1.configure(background="white", text='''''')
 
         self.RedNote1 = Text (master)
         self.RedNote1.place(relx=0.03,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote1.configure(background="white", text='''''')
+        self.RedNote1.configure(background="white")
 
 
 
@@ -234,7 +233,7 @@ class New_Toplevel_1:
 
         self.RedNote2 = Text (master)
         self.RedNote2.place(relx=0.15,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote2.configure(background="white", text='''''')
+        self.RedNote2.configure(background="white")
 
 
 
@@ -316,7 +315,7 @@ class New_Toplevel_1:
         
         self.RedNote3 = Text (master)
         self.RedNote3.place(relx=0.27,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.RedNote3.configure(background="white", text='''''')  
+        self.RedNote3.configure(background="white")  
 
         self.RedScore1 = Entry (master)
         self.RedScore1.place(relx=0.15,rely=0.5,relheight=0.03,relwidth=0.11)
@@ -401,7 +400,7 @@ class New_Toplevel_1:
 
         self.BlueNote1 = Text (master)
         self.BlueNote1.place(relx=0.62,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote1.configure(background="white", text='''''')
+        self.BlueNote1.configure(background="white")
 
 
 
@@ -463,7 +462,7 @@ class New_Toplevel_1:
 
         self.BlueNote2 = Text (master)
         self.BlueNote2.place(relx=0.74,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote2.configure(background="white", text='''''')
+        self.BlueNote2.configure(background="white")
 
 
 
@@ -569,7 +568,7 @@ class New_Toplevel_1:
 
         self.BlueNote3 = Text (master)
         self.BlueNote3.place(relx=0.86,rely=0.55,relheight=0.35,relwidth=0.11)
-        self.BlueNote3.configure(background="white", text='''''')
+        self.BlueNote3.configure(background="white")
 
         self.Label6 = Label (master)
         self.Label6.place(relx=0.17,rely=0.47,height=21,width=88)
@@ -623,7 +622,7 @@ class New_Toplevel_1:
 
 
         self.Submit = Button (master, command =callback)
-        self.Submit.place(relx=0.0,rely=0.91,height=74,width=1177)
+        self.Submit.place(relx=0.001,rely=0.91,height=74,width=1177)
         self.Submit.configure(pady="0")
         self.Submit.configure(text='''Submit''')
 
@@ -781,7 +780,12 @@ def callback():
                 conn.close
                 i = i+1
 
-    
+    w.RedNote1.delete(1.0, END)
+    w.RedNote2.delete(1.0, END)
+    w.RedNote3.delete(1.0, END)
+    w.BlueNote1.delete(1.0, END)
+    w.BlueNote2.delete(1.0, END)
+    w.BlueNote3.delete(1.0, END)
 
     read = raw_input('type read to read: ')
     if read == 'read':

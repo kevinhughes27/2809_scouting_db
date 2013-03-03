@@ -1,5 +1,5 @@
 # genOPR.py
-#by Sawyer Shipp-Wiedersprecher, Russell Dawes and Kevin Hughes
+#(C) Sawyer Shipp-Wiedersprecher, Russell Dawes and Kevin Hughes
 
 """
 Generates the Offensive Power Rating(OPR) of each team
