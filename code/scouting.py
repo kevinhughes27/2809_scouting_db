@@ -2,7 +2,7 @@
 #C Sawyer Shipp-Wiedersprecher, Russell Dawes and Kevin Hughes
 
 import sqlite3
-conn = sqlite3.connect('scouting.db')
+conn = sqlite3.connect('test.db')
 c = conn.cursor()
 
 while True:
@@ -16,7 +16,9 @@ while True:
                 team = int(raw_input('Team: '))
                 match = int(raw_input('match: '))
                 colour = int(raw_input('Alliance Color: (0 for Red 1 For Blue)'))
-                autoScore = int(raw_input('Autonomous Score: '))
+                autoThree = int(raw_input('Autonomous Three Pointers: '))
+                autoTwo = int(raw_input('Autonomous Two Pointers: '))
+                autoOne = int(raw_input('Autonomous One Pointers: '))
                 five = int(raw_input('Five Pointers: '))
                 three = int(raw_input('Three pointers: '))
                 two = int(raw_input('Two pointers: '))
@@ -26,7 +28,7 @@ while True:
                     print 'Invalid Input, climb score can only be 0, 10, 20 or 30'
                     climb = int(raw_input('climb score: '))
                 notes = str(raw_input('notes: '))
-                expectedScore = expectedScore + autoScore + (five*5) + (three*3) + (two*2) + one + climb
+                expectedScore = expectedScore + (autoThree*6) + (autoTwo*4) + (autoOne*2) + (five*5) + (three*3) + (two*2) + one + climb
                 if line == 3:
                     redScore = int(raw_input('Red Team total: '))
                     if expectedScore != redScore:
@@ -37,8 +39,8 @@ while True:
                     if expectedScore != bluScore:
                         print 'User Error: Score inputs do not match'
                     expectedScore = 0
-                row = (team,match,autoScore,five,three,two,one,climb,notes,colour)
-                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?)', row)
+                row = (team,match,autoThree,autoTwo,autoOne,five,three,two,one,climb,notes,colour)
+                c.execute('INSERT INTO teams VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', row)
                 line += 1 
             except ValueError:
                 print 'invalid number'
@@ -55,7 +57,7 @@ while True:
     elif cmd == 'clear':
         c.execute('DROP TABLE if exists teams')
         c.execute('''CREATE TABLE teams
-                    (team, match, auto, five, three,
+                    (team, match, autoThree, autoTwo, autoOne, five, three,
                     two, one, climb, notes, colour)''')
         
     else:
