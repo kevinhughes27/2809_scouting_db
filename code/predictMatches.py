@@ -15,10 +15,10 @@ ranks = np.loadtxt('frcRanks.csv', dtype=int, delimiter=',', skiprows=1, usecols
 #print ranks
 
 for row in schedule:
-    blueScore, redScore = predictMatch(c,row[0],row[1],row[2],row[3],row[4],row[5])
+    redScore, blueScore = predictMatch(c,row[0],row[1],row[2],row[3],row[4],row[5])
 
-    if(blueScore > redScore):
-        print 'Match: ', row, ' blue wins', int(blueScore), 'to', int(redScore)
+    if(redScore > blueScore):
+        print 'Match: ', row, ' red wins', int(redScore), 'to', int(blueScore)
         idx = np.where(ranks==row[0])[0]
         ranks[idx,1] += 2
 
@@ -28,8 +28,8 @@ for row in schedule:
         idx = np.where(ranks==row[2])[0]
         ranks[idx,1] += 2
 
-    if(redScore > blueScore):
-        print 'Match: ', row, ' red wins', int(redScore), 'to', int(blueScore)
+    if(blueScore > redScore):
+        print 'Match: ', row, ' blue wins', int(blueScore), 'to', int(redScore)
         idx = np.where(ranks==row[3])[0]
         ranks[idx,1] += 2
 
