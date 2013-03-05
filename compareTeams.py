@@ -8,11 +8,11 @@ def main():
     
     c,conn = open_db()
 
-	team = int(raw_input('Enter Team 1: '))
-	team2 = int(raw_input('Enter Team 2: '))
-	team3 = int(raw_input('Enter Team 3: '))
-	team4 = int(raw_input('Enter Team 4: '))
-	team5 = int(raw_input('Enter Team 5: '))
+    team = int(raw_input('Enter Team 1: '))
+    team2 = int(raw_input('Enter Team 2: '))
+    team3 = int(raw_input('Enter Team 3: '))
+    team4 = int(raw_input('Enter Team 4: '))
+    team5 = int(raw_input('Enter Team 5: '))
 		
     top = Tk()
 
@@ -22,6 +22,9 @@ def main():
 
     Team1Lbl = Label(top, text=team)
     Team1Lbl.grid(row=0, column=3)
+
+    ExtraRow = Label(top, text="    ")
+    ExtraRow.grid(row=10, column=0)
 
     Column1 = Label(top, text="Match") 
     Column1.grid(row=1, column=0)
@@ -114,64 +117,64 @@ def main():
     Column30.grid(row=1, column=31)
 
     Column31 = Label(top, text="Match") 
-    Column31.grid(row=1, column=33)
+    Column31.grid(row=12, column=0)
     
     Column32 = Label(top, text="Auto Three") 
-    Column32.grid(row=1, column=34)
+    Column32.grid(row=12, column=1)
 
     Column33 = Label(top, text="Auto Two") 
-    Column33.grid(row=1, column=35)
+    Column33.grid(row=12, column=2)
 
     Column34 = Label(top, text="Auto One") 
-    Column34.grid(row=1, column=36)
+    Column34.grid(row=12, column=3)
     
     Column35 = Label(top, text="Five") 
-    Column35.grid(row=1, column=37)
+    Column35.grid(row=12, column=4)
 
     Column36 = Label(top, text="Three") 
-    Column36.grid(row=1, column=38)
+    Column36.grid(row=12, column=5)
 
     Column37 = Label(top, text="Two") 
-    Column37.grid(row=1, column=39)
+    Column37.grid(row=12, column=6)
 
     Column38 = Label(top, text="one") 
-    Column38.grid(row=1, column=40)
+    Column38.grid(row=12, column=7)
 
     Column39 = Label(top, text="climb") 
-    Column39.grid(row=1, column=41)
+    Column39.grid(row=12, column=8)
 
     Column40 = Label(top, text="notes") 
-    Column40.grid(row=1, column=42)
+    Column40.grid(row=12, column=9)
 
     Column41 = Label(top, text="Match") 
-    Column41.grid(row=1, column=44)
+    Column41.grid(row=12, column=22)
     
     Column42 = Label(top, text="Auto Three") 
-    Column42.grid(row=1, column=45)
+    Column42.grid(row=12, column=23)
 
     Column43 = Label(top, text="Auto Two") 
-    Column43.grid(row=1, column=46)
+    Column43.grid(row=12, column=24)
     
     Column44 = Label(top, text="Auto One") 
-    Column44.grid(row=1, column=47)
+    Column44.grid(row=12, column=25)
     
     Column45 = Label(top, text="Five") 
-    Column45.grid(row=1, column=48)
+    Column45.grid(row=12, column=26)
 
     Column46 = Label(top, text="Three") 
-    Column46.grid(row=1, column=49)
+    Column46.grid(row=12, column=27)
 
     Column47 = Label(top, text="Two") 
-    Column47.grid(row=1, column=50)
+    Column47.grid(row=12, column=28)
 
     Column48 = Label(top, text="one") 
-    Column48.grid(row=1, column=51)
+    Column48.grid(row=12, column=29)
 
     Column49 = Label(top, text="climb") 
-    Column49.grid(row=1, column=52)
+    Column49.grid(row=12, column=30)
 
     Column50 = Label(top, text="notes") 
-    Column50.grid(row=1, column=53)
+    Column50.grid(row=12, column=31)
 
     #team1 = Label(top, text=Team1)
     #team1.grid(row=2, column=0)
@@ -231,10 +234,10 @@ def main():
     Team3Lbl.grid(row=0, column=25)
 
     Team4Lbl = Label(top, text=team4)
-    Team4Lbl.grid(row=0, column=36)
+    Team4Lbl.grid(row=11, column=3)
 
     Team5Lbl = Label(top, text=team5)
-    Team5Lbl.grid(row=0, column=47)
+    Team5Lbl.grid(row=11, column=25)
 
     
                   
@@ -300,69 +303,69 @@ def main():
             climb3 = Label(top, text=row[9])
             climb3.grid(row=count, column=26)
 
-    count = 1
+    count = 12
 
     for row in c.execute('select * from teams'):
         if row[0] == team4:
             count += 1
             match4 = Label(top, text=row[1])
-            match4.grid(row=count, column=27)
+            match4.grid(row=count, column=0)
 
             autoThree4 = Label(top, text=row[2])
-            autoThree4.grid(row=count, column=28)
+            autoThree4.grid(row=count, column=1)
 
             autoTwo4 = Label(top, text=row[3])
-            autoTwo4.grid(row=count, column=29)
+            autoTwo4.grid(row=count, column=2)
 
             autoOne4 = Label(top, text=row[4])
-            autoOne4.grid(row=count, column=30)
+            autoOne4.grid(row=count, column=3)
 
             five4 = Label(top, text=row[5])
-            five4.grid(row=count, column=31)
+            five4.grid(row=count, column=4)
 
             three4 = Label(top, text=row[6])
-            three4.grid(row=count, column=32)
+            three4.grid(row=count, column=5)
 
             two4 = Label(top, text=row[7])
-            two4.grid(row=count, column=33)
+            two4.grid(row=count, column=6)
 
             one4 = Label(top, text=row[8])
-            one4.grid(row=count, column=34)
+            one4.grid(row=count, column=7)
 
             climb4 = Label(top, text=row[9])
-            climb4.grid(row=count, column=35)
+            climb4.grid(row=count, column=8)
 
-    count = 1
+    count = 12
 
     for row in c.execute('select * from teams'):
         if row[0] == team5:
             count += 1
             match5 = Label(top, text=row[1])
-            match5.grid(row=count, column=36)
+            match5.grid(row=count, column=22)
 
             autoThree5 = Label(top, text=row[2])
-            autoThree5.grid(row=count, column=37)
+            autoThree5.grid(row=count, column=23)
 
             autoTwo5 = Label(top, text=row[3])
-            autoTwo5.grid(row=count, column=38)
+            autoTwo5.grid(row=count, column=24)
 
             autoOne5 = Label(top, text=row[4])
-            autoOne5.grid(row=count, column=39)
+            autoOne5.grid(row=count, column=25)
 
             five5 = Label(top, text=row[5])
-            five5.grid(row=count, column=40)
+            five5.grid(row=count, column=26)
 
             three5 = Label(top, text=row[6])
-            three5.grid(row=count, column=41)
+            three5.grid(row=count, column=27)
 
             two5 = Label(top, text=row[7])
-            two5.grid(row=count, column=42)
+            two5.grid(row=count, column=28)
 
             one5 = Label(top, text=row[8])
-            one5.grid(row=count, column=43)
+            one5.grid(row=count, column=29)
 
             climb5 = Label(top, text=row[9])
-            climb5.grid(row=count, column=44)
+            climb5.grid(row=count, column=30)
 
     top.focus_set()
     top.mainloop()
