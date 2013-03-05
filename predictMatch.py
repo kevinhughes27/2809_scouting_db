@@ -74,7 +74,7 @@ def main():
 		ranks = ranks[np.lexsort((ranks[:,0], ranks[:,1]))]
 		ranks = np.flipud(ranks)
 		#print ranks
-		np.savetxt('newRanks.csv', ranks, fmt='%d', delimiter=',')
+		np.savetxt('data/newRanks.csv', ranks, fmt='%d', delimiter=',')
 		
 		raw_input('Press Enter to Continue...')
 		return
