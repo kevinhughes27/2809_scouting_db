@@ -55,9 +55,9 @@ def genOPR():
     counter = 0
     for row in c.execute('select * from teams order by match'):
         if row[9] == 1:
-            S[((row[1]-1)*2)+1] += (row[2] + (row[3]*5) + (row[4]*3) + (row[5]*2) + row[6] + row[7])
+            S[((row[1]-1)*2)+1] += (row[2]*6 + (row[3]*4) + (row[4]*2) + (row[5]*5) + row[6]*3 + row[7]*2 + row[8] + row[9])
         else:
-            S[(row[1]-1)*2] += (row[2] + (row[3]*5) + (row[4]*3) + (row[5]*2) + row[6] + row[7])
+            S[(row[1]-1)*2] += (row[2]*6 + (row[3]*4) + (row[4]*2) + (row[5]*5) + row[6]*3 + row[7]*2 + row[8] + row[9])
 
     # OPR calc
     opr = np.linalg.lstsq(P ,S)

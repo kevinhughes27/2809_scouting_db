@@ -24,10 +24,10 @@ def main():
 		            autoThree = int(raw_input('Autonomous Three Pointers: '))
 		            autoTwo = int(raw_input('Autonomous Two Pointers: '))
 		            autoOne = int(raw_input('Autonomous One Pointers: '))
-		            five = int(raw_input('Five Pointers: '))
 		            three = int(raw_input('Three pointers: '))
 		            two = int(raw_input('Two pointers: '))
 		            one = int(raw_input('One Pointers: '))
+		            five = int(raw_input('Five Pointers: '))
 		            climb = int(raw_input('climb score: '))
 		            while climb != 10 and climb != 20 and climb != 30 and climb != 0:
 		                print 'Invalid Input, climb score can only be 0, 10, 20 or 30'
@@ -57,6 +57,7 @@ def main():
 		elif cmd == 'save':
 		    conn.commit()
 		    conn.close()
+		    main()
 		    break
 
 		elif cmd == 'clear':
@@ -67,7 +68,9 @@ def main():
 		    
 		else:
 		    print 'unrecognized command'
-    return
+
+	return
+        
     
 if __name__ == "__main__":
     main()

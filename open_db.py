@@ -2,7 +2,7 @@
 
 import sqlite3
 
-default_db = 'fingerlakes2013.db'
+default_db = 'GTREast2013.db'
 
 def open_db(db=default_db):
 	conn = sqlite3.connect(db)
