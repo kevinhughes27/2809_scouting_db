@@ -1,0 +1,15 @@
+#! /usr/bin/env python
+
+import sqlite3
+
+<<<<<<< HEAD
+default_db = 'data/fingerlakes2013.db'
+=======
+default_db = 'GTREast2013.db'
+>>>>>>> 49c8db2443f0424a2538ca98fd6c3be26c0b5a3a
+
+def open_db(db=default_db):
+	conn = sqlite3.connect(db)
+	c = conn.cursor()
+	return c, conn
+
