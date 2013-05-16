@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 #Command-line database V INDEV
-#C Sawyer Shipp-Wiedersprecher, Russell Dawes and Kevin Hughes
+#(C) Sawyer Shipp-Wiedersprecher, Russell Dawes and Kevin Hughes
 
 import sqlite3
 from open_db import open_db
@@ -16,10 +16,11 @@ def main():
 		if cmd == 'input':
 		    line = 1
 		    expectedScore = 0
+		    match = int(raw_input('match: '))
 		    while line < 7:
 		        try:
 		            team = int(raw_input('Team: '))
-		            match = int(raw_input('match: '))
+		            
 		            colour = int(raw_input('Alliance Color: (0 for Red 1 For Blue)'))
 		            autoThree = int(raw_input('Autonomous Three Pointers: '))
 		            autoTwo = int(raw_input('Autonomous Two Pointers: '))
