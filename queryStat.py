@@ -21,8 +21,9 @@ def queryStat(q,c):
     stats = []
 
     for row in c.execute('select team,avg('+ q +') as avg_'+ q +' from teams group by team order by avg_'+ q +' desc'):
-        teams.append(str(row[0]))
-        stats.append(row[1])
+        if row[1] > 0:
+                teams.append(str(row[0]))
+                stats.append(row[1])
             
     return teams, stats
     

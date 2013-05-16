@@ -3,10 +3,10 @@
 import sqlite3
 
 <<<<<<< HEAD
-default_db = 'data/fingerlakes2013.db'
+default_db = 'data/GTREast2013.db'
 =======
-default_db = 'GTREast2013.db'
->>>>>>> 49c8db2443f0424a2538ca98fd6c3be26c0b5a3a
+default_db = 'Test.db'
+>>>>>>> 8c0fe458ce857be2f8ff759603b75a12a72d295f
 
 def open_db(db=default_db):
 	conn = sqlite3.connect(db)

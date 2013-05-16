@@ -20,7 +20,7 @@ Generates the Offensive Power Rating(OPR) of each team
 """
 def genOPR():
     
-    c = open_db()
+    c, conn = open_db()
     
     count = 0
     rowMax = 0
