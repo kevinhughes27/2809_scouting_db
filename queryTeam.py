@@ -8,7 +8,7 @@ from open_db import open_db
 def main():
     c, conn = open_db()
     team = int(raw_input('Enter a Team: '))
-    
+
     top = Tk()
 
     top.title("queryTeam")
@@ -18,34 +18,34 @@ def main():
     Team1Lbl = Label(top, text=team)
     Team1Lbl.grid(row=0, column=3, sticky=N+E+W+S)
 
-    Column1 = Label(top, text="Match") 
+    Column1 = Label(top, text="Match")
     Column1.grid(row=1, column=0, sticky=N+E+W+S)
-    
-    Column2 = Label(top, text="AutoThree") 
+
+    Column2 = Label(top, text="AutoThree")
     Column2.grid(row=1, column=1, sticky=N+E+W+S)
-    
-    Column2 = Label(top, text="AutoTwo") 
+
+    Column2 = Label(top, text="AutoTwo")
     Column2.grid(row=1, column=2, sticky=N+E+W+S)
-    
-    Column2 = Label(top, text="AutoOne") 
+
+    Column2 = Label(top, text="AutoOne")
     Column2.grid(row=1, column=3, sticky=N+E+W+S)
 
-    Column3 = Label(top, text="Five") 
+    Column3 = Label(top, text="Five")
     Column3.grid(row=1, column=4, sticky=N+E+W+S)
 
-    Column4 = Label(top, text="Three") 
+    Column4 = Label(top, text="Three")
     Column4.grid(row=1, column=5, sticky=N+E+W+S)
 
-    Column5 = Label(top, text="Two") 
+    Column5 = Label(top, text="Two")
     Column5.grid(row=1, column=6, sticky=N+E+W+S)
 
-    Column6 = Label(top, text="one") 
+    Column6 = Label(top, text="one")
     Column6.grid(row=1, column=7, sticky=N+E+W+S)
 
-    Column7= Label(top, text="climb") 
+    Column7= Label(top, text="climb")
     Column7.grid(row=1, column=8, sticky=N+E+W+S)
 
-    Column8 = Label(top, text="notes") 
+    Column8 = Label(top, text="notes")
     Column8.grid(row=1, column=9, sticky=N+E+W+S)
 
     count = 1
@@ -84,15 +84,15 @@ def main():
     top.mainloop()
 
 def main_cmd():
-	c, conn = open_db()
-	team = int(raw_input('Enter a Team: '))
-	
-	for row in c.execute('SELECT * FROM teams'):
-		if row[0] == team:
-		    print row
-	
-	raw_input('Press any key to continue...')
-	return
-	
+    c, conn = open_db()
+    team = int(raw_input('Enter a Team: '))
+
+    for row in c.execute('SELECT * FROM teams'):
+        if row[0] == team:
+            print row
+
+    raw_input('Press any key to continue...')
+    return
+
 if __name__ == "__main__":
-	main()
+    main()

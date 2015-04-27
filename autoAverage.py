@@ -21,7 +21,7 @@ def autoAverage(c):
 
     teams = []
     stats = []
-    
+
     c.execute('drop table if exists auto')
     c.execute('''create table auto (team, average)''')
 
@@ -33,7 +33,7 @@ def autoAverage(c):
         average = (row[1]*6) + (row[2]*4) + (row[3]*2)
         i = (team, average)
         c.execute('insert into auto values (?,?)', i)
-        
+
     for row in c.execute('select * from auto group by team order by average desc'):
         teams.append(str(row[0]))
         stats.append(row[1])

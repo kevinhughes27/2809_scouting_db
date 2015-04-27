@@ -29,14 +29,14 @@ class VerticalScrolledFrame(Frame):
     * Use the 'interior' attribute to place widgets inside the scrollable frame
     * Construct and pack/place/grid normally
     * This frame only allows vertical scrolling
-    
+
     """
     def __init__(self, parent, *args, **kw):
-        Frame.__init__(self, parent, *args, **kw)            
-        
+        Frame.__init__(self, parent, *args, **kw)
+
         # do not shrink to fit contents
         self.pack_propagate(0)
-        
+
         # create a canvas object and a vertical scrollbar for scrolling it
         vscrollbar = Scrollbar(self, orient=VERTICAL)
         vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
@@ -78,7 +78,7 @@ class VerticalScrolledFrame(Frame):
 def photoWindowClose() :
     #photosBtn.config(state=ACTIVE)
     photoWindow.destroy()
-    
+
 def getPicture():
 
     OpenPhoto = tkFileDialog.askdirectory(parent=top, initialdir='C:\Documents and Settings\CCSS\My Documents\GitHub\2809_scouting_db\pictures' ,title=\
@@ -96,8 +96,4 @@ for row in c.execute('SELECT * FROM pitScouting'):
         top = Tk()
         #getPicture()
 
-
-
 raw_input('press any key to continue...')
-
-

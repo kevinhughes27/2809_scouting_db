@@ -11,7 +11,7 @@ Before using:
 -Run matchentry_cmd.py, enter clear to finish setup of the
  new database
 -It is now ready for inputting and outputting data
-  
+
 
 Using matchentry_cmd.py:
 -Go slow, wrong data isn't very useful

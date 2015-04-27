@@ -26,6 +26,6 @@ def rankTeams(c):
         score = (row[1]*6) + (row[2]*4) + (row[3]*2) + (row[4]*5) + (row[5]*3) + (row[6]*2) + (row[7]) + (row[8])
         i = (team, score)
         c.execute('insert into rank values (?,?)', i)
-        
+
 if __name__ == "__main__":
     main()

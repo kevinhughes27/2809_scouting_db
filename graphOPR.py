@@ -38,5 +38,3 @@ def autolabel(rects):
 
 autolabel(rects1)
 plt.show()
-    
-        

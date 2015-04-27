@@ -11,21 +11,21 @@ merges db2 into db1
 
 def main():
 
-	c1,conn1 = open_db(sys.argv[1])
-	c2,conn2 = open_db(sys.argv[2])
+    c1,conn1 = open_db(sys.argv[1])
+    c2,conn2 = open_db(sys.argv[2])
 
-	for row in c2.execute('select * from teams'):
-		print 'Extracting row'
-		print 'Injecting row'
-		c1.execute('insert into teams values (?,?,?,?,?,?,?,?,?)', row)
+    for row in c2.execute('select * from teams'):
+        print 'Extracting row'
+        print 'Injecting row'
+        c1.execute('insert into teams values (?,?,?,?,?,?,?,?,?)', row)
 
-	print 'done'
+    print 'done'
 
-	print 'saving...'
-	conn1.commit()
-	print 'closing...'
-	conn1.close()
-	conn2.close()
-	
+    print 'saving...'
+    conn1.commit()
+    print 'closing...'
+    conn1.close()
+    conn2.close()
+
 if __name__ == "__main__":
     main()

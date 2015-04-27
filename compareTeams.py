@@ -7,171 +7,171 @@ from open_db import open_db
 def main():
 
     q = 0
-    
+
     c,conn = open_db()
 
     while q != '':
         q = raw_input('Enter a Team to query: ')
-		
+
     top = Tk()
 
     top.title("Compare Teams")
     top.resizable(1, 1)
     top.maxsize(4000, 4000)
 
-    
+
 
     ExtraRow = Label(top, text="    ")
     ExtraRow.grid(row=10, column=0)
 
-    Column1 = Label(top, text="Match") 
+    Column1 = Label(top, text="Match")
     Column1.grid(row=1, column=0)
 
-    Column2 = Label(top, text="Auto Three") 
+    Column2 = Label(top, text="Auto Three")
     Column2.grid(row=1, column=1)
 
-    Column3 = Label(top, text="Auto Two") 
+    Column3 = Label(top, text="Auto Two")
     Column3.grid(row=1, column=2)
 
-    Column4 = Label(top, text="Auto One") 
+    Column4 = Label(top, text="Auto One")
     Column4.grid(row=1, column=3)
 
-    Column5 = Label(top, text="Five") 
+    Column5 = Label(top, text="Five")
     Column5.grid(row=1, column=4)
 
-    Column6 = Label(top, text="Three") 
+    Column6 = Label(top, text="Three")
     Column6.grid(row=1, column=5)
 
-    Column7 = Label(top, text="Two") 
+    Column7 = Label(top, text="Two")
     Column7.grid(row=1, column=6)
 
-    Column8 = Label(top, text="one") 
+    Column8 = Label(top, text="one")
     Column8.grid(row=1, column=7)
 
-    Column9= Label(top, text="climb") 
+    Column9= Label(top, text="climb")
     Column9.grid(row=1, column=8)
 
-    Column10 = Label(top, text="notes") 
+    Column10 = Label(top, text="notes")
     Column10.grid(row=1, column=9)
 
-    Column11 = Label(top, text="Match") 
+    Column11 = Label(top, text="Match")
     Column11.grid(row=1, column=11)
 
-    Column12 = Label(top, text="Auto Three") 
+    Column12 = Label(top, text="Auto Three")
     Column12.grid(row=1, column=12)
 
-    Column13 = Label(top, text="Auto Two") 
+    Column13 = Label(top, text="Auto Two")
     Column13.grid(row=1, column=13)
 
-    Column14 = Label(top, text="Auto One") 
+    Column14 = Label(top, text="Auto One")
     Column14.grid(row=1, column=14)
 
-    Column15 = Label(top, text="Five") 
+    Column15 = Label(top, text="Five")
     Column15.grid(row=1, column=15)
 
-    Column16 = Label(top, text="Three") 
+    Column16 = Label(top, text="Three")
     Column16.grid(row=1, column=16)
 
-    Column17 = Label(top, text="Two") 
+    Column17 = Label(top, text="Two")
     Column17.grid(row=1, column=17)
 
-    Column18 = Label(top, text="one") 
+    Column18 = Label(top, text="one")
     Column18.grid(row=1, column=18)
 
-    Column19 = Label(top, text="climb") 
+    Column19 = Label(top, text="climb")
     Column19.grid(row=1, column=19)
 
-    Column20 = Label(top, text="notes") 
+    Column20 = Label(top, text="notes")
     Column20.grid(row=1, column=20)
 
-    Column21 = Label(top, text="Match") 
+    Column21 = Label(top, text="Match")
     Column21.grid(row=1, column=22)
 
-    Column22 = Label(top, text="Auto Three") 
+    Column22 = Label(top, text="Auto Three")
     Column22.grid(row=1, column=23)
 
-    Column23 = Label(top, text="Auto Two") 
+    Column23 = Label(top, text="Auto Two")
     Column23.grid(row=1, column=24)
 
-    Column24 = Label(top, text="Auto One") 
+    Column24 = Label(top, text="Auto One")
     Column24.grid(row=1, column=25)
 
-    Column25 = Label(top, text="Five") 
+    Column25 = Label(top, text="Five")
     Column25.grid(row=1, column=26)
 
-    Column26 = Label(top, text="Three") 
+    Column26 = Label(top, text="Three")
     Column26.grid(row=1, column=27)
 
-    Column27 = Label(top, text="Two") 
+    Column27 = Label(top, text="Two")
     Column27.grid(row=1, column=28)
 
-    Column28 = Label(top, text="one") 
+    Column28 = Label(top, text="one")
     Column28.grid(row=1, column=29)
 
-    Column29= Label(top, text="climb") 
+    Column29= Label(top, text="climb")
     Column29.grid(row=1, column=30)
 
-    Column30 = Label(top, text="notes") 
+    Column30 = Label(top, text="notes")
     Column30.grid(row=1, column=31)
 
-    Column31 = Label(top, text="Match") 
+    Column31 = Label(top, text="Match")
     Column31.grid(row=12, column=0)
 
-    Column32 = Label(top, text="Auto Three") 
+    Column32 = Label(top, text="Auto Three")
     Column32.grid(row=12, column=1)
 
-    Column33 = Label(top, text="Auto Two") 
+    Column33 = Label(top, text="Auto Two")
     Column33.grid(row=12, column=2)
 
-    Column34 = Label(top, text="Auto One") 
+    Column34 = Label(top, text="Auto One")
     Column34.grid(row=12, column=3)
 
-    Column35 = Label(top, text="Five") 
+    Column35 = Label(top, text="Five")
     Column35.grid(row=12, column=4)
 
-    Column36 = Label(top, text="Three") 
+    Column36 = Label(top, text="Three")
     Column36.grid(row=12, column=5)
 
-    Column37 = Label(top, text="Two") 
+    Column37 = Label(top, text="Two")
     Column37.grid(row=12, column=6)
 
-    Column38 = Label(top, text="one") 
+    Column38 = Label(top, text="one")
     Column38.grid(row=12, column=7)
 
-    Column39 = Label(top, text="climb") 
+    Column39 = Label(top, text="climb")
     Column39.grid(row=12, column=8)
 
-    Column40 = Label(top, text="notes") 
+    Column40 = Label(top, text="notes")
     Column40.grid(row=12, column=9)
 
-    Column41 = Label(top, text="Match") 
+    Column41 = Label(top, text="Match")
     Column41.grid(row=12, column=22)
 
-    Column42 = Label(top, text="Auto Three") 
+    Column42 = Label(top, text="Auto Three")
     Column42.grid(row=12, column=23)
 
-    Column43 = Label(top, text="Auto Two") 
+    Column43 = Label(top, text="Auto Two")
     Column43.grid(row=12, column=24)
 
-    Column44 = Label(top, text="Auto One") 
+    Column44 = Label(top, text="Auto One")
     Column44.grid(row=12, column=25)
 
-    Column45 = Label(top, text="Five") 
+    Column45 = Label(top, text="Five")
     Column45.grid(row=12, column=26)
 
-    Column46 = Label(top, text="Three") 
+    Column46 = Label(top, text="Three")
     Column46.grid(row=12, column=27)
 
-    Column47 = Label(top, text="Two") 
+    Column47 = Label(top, text="Two")
     Column47.grid(row=12, column=28)
 
-    Column48 = Label(top, text="one") 
+    Column48 = Label(top, text="one")
     Column48.grid(row=12, column=29)
 
-    Column49 = Label(top, text="climb") 
+    Column49 = Label(top, text="climb")
     Column49.grid(row=12, column=30)
 
-    Column50 = Label(top, text="notes") 
+    Column50 = Label(top, text="notes")
     Column50.grid(row=12, column=31)
 
     #team1 = Label(top, text=Team1)
@@ -185,10 +185,10 @@ def main():
 
                 Team1Lbl = Label(top, text=q)
                 Team1Lbl.grid(row=0, column=3)
-                
+
                 Team2Lbl = Label(top, text=q)
                 Team2Lbl.grid(row=0, column=14)
-                
+
                 match1 = Label(top, text=row[1])
                 match1.grid(row=count, column=0)
 
@@ -201,7 +201,7 @@ def main():
                 autoOne1 = Label(top, text=row[4])
                 autoOne1.grid(row=count, column=3)
 
-                
+
                 five1 = Label(top, text=row[5])
                 five1.grid(row=count, column=4)
 
@@ -216,7 +216,7 @@ def main():
 
                 climb1 = Label(top, text=row[9])
                 climb1.grid(row=count, column=8)
-                
+
                 count = 1
 
     space = Label(top, text="       ")
@@ -232,7 +232,7 @@ def main():
     space4.grid(row=2, column=43)
 
 
-    '''    
+    '''
 
         Team3Lbl = Label(top, text=team3)
         Team3Lbl.grid(row=0, column=25)
@@ -243,8 +243,8 @@ def main():
         Team5Lbl = Label(top, text=team5)
         Team5Lbl.grid(row=11, column=25)
     '''
-        
-                      
+
+
     for row in c.execute('select * from teams'):
         if count == 1:
             if row[0] == q:

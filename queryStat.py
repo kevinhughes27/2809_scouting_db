@@ -4,16 +4,16 @@ import sqlite3
 from open_db import open_db
 
 def main():
-	c,conn = open_db()
-	q = raw_input('Enter a stat to query: ')
-	
-	teams, stats = queryStat(q,c)
+    c,conn = open_db()
+    q = raw_input('Enter a stat to query: ')
 
-	for i, v in enumerate(teams):
-		print v, stats[i]
+    teams, stats = queryStat(q,c)
 
-	raw_input('Press enter to continue...')
-	return
+    for i, v in enumerate(teams):
+        print v, stats[i]
+
+    raw_input('Press enter to continue...')
+    return
 
 def queryStat(q,c):
 
@@ -24,8 +24,8 @@ def queryStat(q,c):
         if row[1] > 0:
                 teams.append(str(row[0]))
                 stats.append(row[1])
-            
+
     return teams, stats
-    
+
 if __name__ == "__main__":
     main()

@@ -10,7 +10,7 @@ c,conn = open_db()
 while True:
 
     teams, stats = autoAverage(c)
-    
+
     xaxis = []
     count = 0
 

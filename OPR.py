@@ -8,20 +8,20 @@ import sqlite3
 from open_db import open_db
 
 def main():
-	teamOPR = genOPR()
-	for t in teamOPR:
-		print t
+    teamOPR = genOPR()
+    for t in teamOPR:
+        print t
 
-	raw_input('press enter to continue...')
-	return
+    raw_input('press enter to continue...')
+    return
 
 """
 Generates the Offensive Power Rating(OPR) of each team
 """
 def genOPR():
-    
+
     c, conn = open_db()
-    
+
     count = 0
     rowMax = 0
     teams = []
@@ -47,7 +47,7 @@ def genOPR():
             P[((row[1]-1)*2)+1][i] = 1
         else:
             P[(row[1]-1)*2][i] = 1
-    
+
     #np.savetxt("pMat.csv", P, delimiter=',')
 
     #score vector
@@ -69,7 +69,7 @@ def genOPR():
     teamOPR.sort(key=lambda tup: tup[1], reverse=True)
 
 
-    return teamOPR    
-    
+    return teamOPR
+
 if __name__ == "__main__":
     main()

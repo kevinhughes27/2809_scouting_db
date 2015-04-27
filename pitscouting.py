@@ -25,8 +25,6 @@ usePitData = None
 pictureBtn = None
 openPitFileBtn = None
 
-
-
 top = Tk()
 
 def main():
@@ -36,7 +34,7 @@ def main():
     top.title("2809 Pit-Scouting")
     top.resizable(1, 1)
     top.maxsize(2000, 2000)
-    
+
     #Frm = Frame(top)
 
     TeamLbl = Label(top, text="Team:")
@@ -62,17 +60,17 @@ def main():
     #PictureBtn.grid(row=2, column=2, sticky=N+E+W+S)
 
     DoneBtn = Button(top, text="Enter", command=EnterData)
-                     
+
     DoneBtn.grid(row=2, column=1, sticky=N+E+W+S)
 
     rootDir = os.getcwd()
-    
+
     top.mainloop()
-        
+
 '''def getPicture():
     global teamPhotosDir,photoWindow, photoWindowFrame, photoTeamNoEntry, teamPhotoCanvas
     global pitTeamNoLookupTbl
-        
+
     teamPhotosDir = tkFileDialog.askdirectory(parent=top, title=\
                                             "Which Folder are the team photos in?")
 
@@ -131,7 +129,5 @@ def EnterData():
     DriveTrainEntry.delete(0, END)
     NotesEntry.delete(0, END)
     TeamEntry.focus_set()
-    
-
 
 main()

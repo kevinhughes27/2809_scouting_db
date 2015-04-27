@@ -5,7 +5,7 @@ import sqlite3
 default_db = 'data/GTREast2013.db'
 
 def open_db(db=default_db):
-	conn = sqlite3.connect(db)
-	c = conn.cursor()
-	return c, conn
+    conn = sqlite3.connect(db)
+    c = conn.cursor()
+    return c, conn
 
